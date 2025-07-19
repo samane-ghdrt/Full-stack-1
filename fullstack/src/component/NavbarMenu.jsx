@@ -17,7 +17,9 @@ export default function NavbarMenu() {
     }
   }, [isLoading]);
 
-  const handleClick = () => setLoading(true);
+  const handleClick = () => {
+    
+  };
   return (
     <div style={{
       // width:"80%",
