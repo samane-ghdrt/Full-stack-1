@@ -28,7 +28,7 @@ export default function Task() {
         </Form.Group>
                 <Form.Group className="mb-3">
           <Form.Label htmlFor="disabledTextInput">Description (optional)</Form.Label>
-          <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" />
+          <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" as="textarea" rows={3}/>
         </Form.Group>
                 <Form.Group className="mb-3">
           <Form.Label >Date</Form.Label>
@@ -44,6 +44,7 @@ export default function Task() {
           />
         </Form.Group>
         <Form.Group className="mb-3">
+          <Form.Check label="option 1" />
           <Form.Check
             type="checkbox"
             id="disabledFieldsetCheck"
