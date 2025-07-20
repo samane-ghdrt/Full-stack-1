@@ -1,8 +1,8 @@
 import React from 'react'
+import { Button, Modal } from 'react-bootstrap'
 
 export default function Task() {
   return (
-    <div>
             <div
       className="modal show"
       style={{ display: 'block', position: 'initial' }}
@@ -22,7 +22,5 @@ export default function Task() {
         </Modal.Footer>
       </Modal.Dialog>
     </div>
-        
-        </div>
   )
 }

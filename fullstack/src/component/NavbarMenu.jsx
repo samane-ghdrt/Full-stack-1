@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {Button,Col,Container,Form,InputGroup,Nav,Navbar,NavDropdown,Offcanvas, Row} from 'react-bootstrap';
+import Task from './Task';
 export default function NavbarMenu() {
   const [isLoading, setLoading] = useState(false);
+  const [showTask, setshowTask] = useState(false);
+  
 
   useEffect(() => {
     function simulateNetworkRequest() {
@@ -18,7 +21,7 @@ export default function NavbarMenu() {
   }, [isLoading]);
 
   const handleClick = () => {
-    
+    setshowTask(true)
   };
   return (
     <div style={{
@@ -37,11 +40,11 @@ export default function NavbarMenu() {
       <Col xs="auto">
     <Button
       variant="primary"
-      disabled={isLoading}
-      onClick={!isLoading ? handleClick : null}
+      onClick={handleClick}
         size="sm"
     >
     Add new task
+    {showTask && <Task/>}
     </Button>
     </Col>
           </Row>
