@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Form, Modal } from 'react-bootstrap'
 
 export default function Task() {
   return (
@@ -8,19 +8,65 @@ export default function Task() {
       style={{ display: 'block', position: 'initial' }}
     >
       <Modal.Dialog>
+        <Form>
         <Modal.Header closeButton>
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>Modal body text goes here.</p>
+          <fieldset disabled>
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="disabledTextInput">title</Form.Label>
+          <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="disabledSelect">Date</Form.Label>
+          <Form.Select id="disabledSelect">
+            <option>Disabled select</option>
+          </Form.Select>
+        </Form.Group>
+                <Form.Group className="mb-3">
+          <Form.Label htmlFor="disabledTextInput">Description (optional)</Form.Label>
+          <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" />
+        </Form.Group>
+                <Form.Group className="mb-3">
+          <Form.Label htmlFor="disabledSelect">Date</Form.Label>
+          <Form.Select id="disabledSelect">
+            <option>Disabled select</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Check
+            type="checkbox"
+            id="disabledFieldsetCheck"
+            label="Mark as important"
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Check
+            type="checkbox"
+            id="disabledFieldsetCheck"
+            label="Mark as completed"
+          />
+        </Form.Group>
+        <Button size='lg' type="submit">Submit</Button>
+       
+      </fieldset>
         </Modal.Body>
 
-        <Modal.Footer>
+
+        {/* <Modal.Footer>
           <Button variant="secondary">Close</Button>
           <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
+        </Form>
       </Modal.Dialog>
     </div>
   )
 }
+   
+
+
+
+
+      
