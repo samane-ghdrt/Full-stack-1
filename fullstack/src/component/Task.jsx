@@ -10,7 +10,7 @@ export default function Task() {
       <Modal.Dialog>
         <Form>
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Add a Task</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -20,9 +20,10 @@ export default function Task() {
           <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="disabledSelect">Date</Form.Label>
+          <Form.Label >Date</Form.Label>
           <Form.Select id="disabledSelect">
             <option>Disabled select</option>
+             <option value="1">Main</option>
           </Form.Select>
         </Form.Group>
                 <Form.Group className="mb-3">
@@ -30,7 +31,7 @@ export default function Task() {
           <Form.Control id="disabledTextInput" placeholder="e.g.study for the test" />
         </Form.Group>
                 <Form.Group className="mb-3">
-          <Form.Label htmlFor="disabledSelect">Date</Form.Label>
+          <Form.Label >Date</Form.Label>
           <Form.Select id="disabledSelect">
             <option>Disabled select</option>
           </Form.Select>
