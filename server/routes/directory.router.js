@@ -5,13 +5,15 @@ const {
   deleteDirectory,
   getAllDirectory,
   updateDirectory,
+  getDirectoryByTask,
 } = require("../controller/directory.controller");
 
 const router = express.Router();
 
-router.get("/directories/", getAllDirectory);
-router.post("/directories/", crateDirectory);
-router.patch("/directories/:id", updateDirectory);
-router.delete("/directories/:id", deleteDirectory);
+router.get("/", getAllDirectory);
+router.post("/", crateDirectory);
+router.patch("/:id", updateDirectory);
+router.delete("/:id", deleteDirectory);
+router.get("/:dirId/tasks", getDirectoryByTask);
 
 module.exports = router;

@@ -1,4 +1,5 @@
 const Directory = require("../models/directory");
+const Task = require("../models/tasks");
 
 const crateDirectory = async (req, res) => {
   try {
@@ -38,10 +39,19 @@ const updateDirectory = async (req, res) => {
     res.status(500).json({ msg: error.message });
   }
 };
+const getDirectoryByTask = async (req, res) => {
+  try {
+    const tasks = await Task.find({ dirId: req.params.dirId });
+    res.status(200).json(tasks);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
 
 module.exports = {
   crateDirectory,
   getAllDirectory,
   deleteDirectory,
   updateDirectory,
+  getDirectoryByTask,
 };
